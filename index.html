@@ -8,17 +8,17 @@
   <body>
     <main>
       <h1>Lights Out!</h1>
-      
+
       <div class="board">
-        <div id="a"></div>
-        <div id="b"></div>
-        <div id="c"></div>
-        <div id="d"></div>
-        <div id="e" class="off"></div>
-        <div id="f"></div>
-        <div id="g"></div>
-        <div id="h"></div>
-        <div id="i"></div>
+        <div id="a" onclick="$("#a", "#b", "#d").toggleClass("off")"></div>
+        <div id="b" onclick="$("#a", "#b", "#c", "#e").toggleClass("off")"></div>
+        <div id="c" onclick="$("#b", "#c", "#f").toggleClass("off")"></div>
+        <div id="d" onclick="$("#a", "#d", "#e", "#g").toggleClass("off")"></div>
+        <div id="e" class="off" onclick="$("#b", "#d", "#e", "#f", "#h").toggleClass("off")"></div>
+        <div id="f" onclick="$("#c", "#e", "#f", "#i").toggleClass("off")"></div>
+        <div id="g" onclick="$("#d", "#g", "#h").toggleClass("off")"></div>
+        <div id="h" onclick="$("#e", "#g", "#h", "#i").toggleClass("off")"></div>
+        <div id="i" onclick="$("#f", "#h", "#i").toggleClass("off")"></div>
       </div>
     </main>
   </body>
